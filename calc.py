@@ -42,7 +42,7 @@ def main():
         if total_stat:
             max_val = np.max(total_variance)
             amount = np.count_nonzero(total_variance == max_val)
-            values = sorted(np.argpartition(total_variance, -amount)[-amount:])
+            values = sorted(np.argpartition(total_variance, -amount)[-amount:])     #returns indexies (faster func)
 
             print(
                 f"For row {num} the estimated age is in {{{', '.join([str(v) for v in values])}}}",
@@ -50,8 +50,8 @@ def main():
                 # f"with {len(total_stat)} statistics used: {', '.join(total_stat)}",
                 f"with {len(total_stat)} statistics used",
             )
-            # plt.bar(np.arange(101), total_variance)
-            # plt.show()
+            plt.bar(np.arange(101), total_variance)
+            plt.show()
         else:
             print(f"Could not tell anything about row {num} :c")
 
