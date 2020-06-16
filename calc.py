@@ -50,11 +50,12 @@ def main():
                 # f"with {len(total_stat)} statistics used: {', '.join(total_stat)}",
                 f"with {len(total_stat)} statistics used",
             )
-            #plt.bar(np.arange(101), total_variance) #print graphics for each row(person)
-            #plt.show()
+            plt.bar(np.arange(101), total_variance) #print graphics for each row(person)
+            plt.show()
         else:
             print(f"Could not tell anything about row {num} :c")
 
 
 if __name__ == "__main__":
     main()
+    
